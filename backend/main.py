@@ -41,7 +41,7 @@ class termcolors:
 
 # GLOBAL CONFIGS
 
-VERSION = 0.1
+VERSION = 0.2
 CPU_COUNT = multiprocessing.cpu_count()
 
 # Python [PIP] Dependencies Installer
@@ -65,17 +65,33 @@ def DependenciesManager():
 # BANNER
 
 def BANNER():
+
+    #BANNER
+    print(termcolors.OKGREEN + 
+        r'''
+            ========= !!========        //\\         ==========  !!     //  X========== !!======== 
+                   // !!       \\      //  \\       //           !!    //  !!           !!       \\  
+                  //  !!       XX     //====\\      !!           !!   //   !!           !!       XX
+                 //   !!       //    //XXXXXX\\     !!           !!  //    !!           !!       //
+                //    !!========    //========\\    !!           !!XX      !!========X  !!======== 
+               //     !!\\         //          \\   !!           !!  \\    !!           !!\\
+              //      !! \\       //            \\  !!           !!   \\   !!           !! \\
+             //       !!  \\     //              \\ \\           !!    \\  !!           !!  \\
+             ======== !!   \\    X                X  ==========  !!     \\  X========== !!   \\
+        ''')
+
+    #HEADER
     print(termcolors.HEADER + 
         ''' 
-            ####################################################################\n                                                                 
-            *\t"Zracker" == Zip File Password BruteForcing Utility Tool        *\n      
-            *\tby : devIM                                                      *\n
-            *\tcodename: 'shoerack'                                            *\n
-            *\tLicense: GNU General Public License v3.0                        *\n
-            *\tFor More Stuffs visit : "https://devim-stuffs.github.io"        *\n                                                                               
-            *\tOnly For *'LEGAL / EDUCATIONAL'* Purposes ;)                    *\n                                                                
-            ####################################################################\n
-            ''' + termcolors.OKBLUE + f"\tCurrent Version: {VERSION}\t[MAX] CPU Cores Available : {CPU_COUNT}\n")
+            \t\t#################################################################\n                                                                 
+            \t\t*   "Zracker" == Zip File Password BruteForcing Utility Tool    *\n      
+            \t\t*   by : devIM [Twitter : "_devIM_"]                            *\n
+            \t\t*   codename: 'shoerack'                                        *\n
+            \t\t*   License: GNU General Public License v3.0                    *\n
+            \t\t*   For More Stuffs visit : "https://devim-stuffs.github.io"    *\n                                                                               
+            \t\t*   Only For *'LEGAL / EDUCATIONAL'* Purposes ;)                *\n                                                                
+            \t\t#################################################################\n
+            ''' + termcolors.OKBLUE + f"\t\t\tCurrent Version: {VERSION}\t[MAX] CPU Cores Available : {CPU_COUNT}\n")
 
 
 # MENU
@@ -83,9 +99,9 @@ def BANNER():
 def MENU():
     print(f"{termcolors.BOLD}-" * 10 + f"{termcolors.BOLD}MENU" + f"{termcolors.BOLD}-" * 10 + "\n")
     print(f"{termcolors.BOLD}[1] Crack Zip Files with Custom Dictionary Attack")
-    print(f"{termcolors.BOLD}[2] Crack Zip Files with BruteForce Attack")
+    print(f"{termcolors.BOLD}[2] Crack Zip Files with BruteForce Attack [Yet works on single-core and is under Heavy Development]")
     print(f"{termcolors.BOLD}[3] About Zracker")
-    print(f"{termcolors.BOLD}[0] Quit")
+    print(f"{termcolors.BOLD}[0/q] Quit")
 
 
 # EXIT
@@ -150,11 +166,13 @@ def choice_manager():
 # RUN FROM UPDATER {zrcker.py}
 
 def RUN():
-
-    clearScreen()
-    BANNER()
-    MENU()
-    choice_manager()
+    try:
+        clearScreen()
+        BANNER()
+        MENU()
+        choice_manager()
+    except KeyboardInterrupt:
+        EXIT()
 
 
 # POST IMPORTS

@@ -46,11 +46,15 @@ def custom_dictionary_attack():
         if os.path.isfile(input_wordlist) == True:
             break
 
-    input_core = int(input(f"{termcolors.ENDC}Enter no. of Cores to use [Max:{CPU_COUNT}] : "))
-    while input_core > CPU_COUNT or input_core <= 0: 
-        input_core = int(input(f"{termcolors.FAIL}Maximum Cores Available are : {CPU_COUNT}\n{termcolors.ENDC}Enter no. of Cores to use : "))
-        if input_core <= CPU_COUNT:
-            break
+    
+    try:
+        input_core = int(input(f"{termcolors.ENDC}Enter no. of Cores to use [Max:{CPU_COUNT}] {{Empty for Default}}: "))
+        while int(input_core) > CPU_COUNT or int(input_core) <= 0: 
+            input_core = int(input(f"{termcolors.FAIL}Maximum Cores Available are : {CPU_COUNT}\n{termcolors.ENDC}Enter no. of Cores to use : "))
+            if input_core <= CPU_COUNT and input_core > 0:
+                break
+    except Exception as e:
+        input_core = int(CPU_COUNT)
 
 
     zip_file = zipfile.ZipFile(input_zip)

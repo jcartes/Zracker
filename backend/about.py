@@ -27,4 +27,5 @@ def ABOUT():
 		\n\t\t{termcolors.OKGREEN}of Password Cracking. Can utilise Maximum no. of Cores,
 		\n\t\t{termcolors.OKGREEN}that means increases the process of cracking of zip passwords
 		\n\t\t{termcolors.OKGREEN}by opening different processes on different independent cores.
+		\n\t{termcolors.BOLD}For detailed info, go to : https://github.com/devim-stuffs/Zracker
 		""")

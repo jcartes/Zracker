@@ -94,30 +94,31 @@ def Update():
 		RUN()
 
 
-try:
+#try:
 
-	print(f"{termcolors.OKBLUE}\n[+] Checking for Updates ...")
-	url = "https://devim-stuffs.github.io/zracker/version_control"
+print(f"{termcolors.OKBLUE}\n[+] Checking for Updates ...")
+url = "https://devim-stuffs.github.io/zracker/version_control"
 
-	document = requests.get(url).text
-	document = BeautifulSoup(document, 'lxml')
+document = requests.get(url).text
+document = BeautifulSoup(document, 'lxml')
 
-	version = document.find(id="version_control").text
+version = document.find(id="version_control").text
 
 
-	if float(version) > imported_version:
-		# UPDATE AVAILABLE
-		print(f"{termcolors.OKGREEN}[+] Updates are Available.")
-		input(f"{termcolors.HEADER}\n[Press Enter to Move to Update Terminal ...]")
-		Update()
+if float(version) > imported_version:
+	# UPDATE AVAILABLE
+	print(f"{termcolors.OKGREEN}[+] Updates are Available.")
+	input(f"{termcolors.HEADER}\n[Press Enter to Move to Update Terminal ...]")
+	Update()
 
-	else:
-		# UP-TO-DATE
-		print(f"{termcolors.BOLD}[+] You are Up-to-Date")
-		input(f"{termcolors.HEADER}\n[Press Enter to Continue ...]")
-		RUN()
-
+else:
+	# UP-TO-DATE
+	print(f"{termcolors.BOLD}[+] You are Up-to-Date")
+	input(f"{termcolors.HEADER}\n[Press Enter to Continue ...]")
+	RUN()
+'''
 except Exception as e:
 	print(f"{termcolors.FAIL}something went wrong ...")
 	input(f"{termcolors.HEADER}\n[Press Enter to Continue to Zracker ...]")
 	RUN()
+'''
