@@ -7,14 +7,11 @@
 >- Available for Linux only ...
 
 
-#### Dedicated WebSite: https://devim-stuffs.github.io/zracker/
-#### Link to Post on Null-Byte [by me]: https://t.co/0PmRKq0bPT?amp=1
-
 #### Also, Check Zracker on -->
+ - [Dedicated Website](https://devim-stuffs.github.io/zracker/)
+ - [Detailed info-n-explanation on Null-Byte](https://null-byte.wonderhowto.com/forum/increasing-speed-cracking-zip-passwords-with-power-cpu-0341537/)
  - [KitPloit](https://t.co/5JQqnhDfrS?amp=1)
- - [Hacker-Gadgets](https://t.co/qFaVq5TLmh?amp=1)
- - [PentestTools](https://t.co/vuGLkY3tgg?amp=1)
- - [HakTechs](https://t.co/1n0jJ78zwi?amp=1)
+ - [Red Packet Security](https://www.redpacketsecurity.com/zracker-zip-file-password-bruteforcing-utility-tool-based-on-cpu-power/zracker/)
 
 
 # Features
